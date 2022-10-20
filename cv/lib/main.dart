@@ -23,18 +23,20 @@ class MyCv extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: Column(
-        children: const [
-          SizedBox(height: 30),
-          CircleAvatar(
-            radius: 90,
-            foregroundImage: AssetImage('assets/photo.jpeg'),
-          ),
-          Text('Alex Shilenkov'),
-          Text('looking for a job Team Lead/Product Owner'),
-        ],
-      )),
+      body: SafeArea(
+        child: Center(
+            child: Column(
+          children: const [
+            SizedBox(height: 30),
+            CircleAvatar(
+              radius: 90,
+              foregroundImage: AssetImage('assets/photo.jpeg'),
+            ),
+            Text('Alex Shilenkov'),
+            Text('looking for a job Team Lead/Product Owner'),
+          ],
+        )),
+      ),
     );
   }
 }
