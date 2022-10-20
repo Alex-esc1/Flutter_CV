@@ -26,37 +26,73 @@ class MyCv extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-            child: Column(children: const [
-          SizedBox(height: 30),
-          CircleAvatar(
-            radius: 90,
-            foregroundImage: AssetImage('assets/photo.jpeg'),
-          ),
-          Text(
-            'Alex Shilenkov',
-            style: kbigTitle,
-          ),
-          Text('looking for a job Team Lead/Product Owner', style: ksmallTitle),
-          SizedBox(height: 30),
-          Padding(
-            padding: kpadding,
-            child: Card(
-              child: ListTile(
-                leading: Icon(Icons.call),
-                title: Text("+375 25 745 22 30"),
+          child: Column(
+            children: [
+              const SizedBox(height: 30),
+              const CircleAvatar(
+                radius: 90,
+                foregroundImage: AssetImage('assets/photo.jpeg'),
               ),
-            ),
-          ),
-          Padding(
-            padding: kpadding,
-            child: Card(
-              child: ListTile(
-                leading: Icon(Icons.email),
-                title: Text("alexesc154@gmail.com"),
+              const Text(
+                name,
+                style: kbigTitle,
               ),
-            ),
+              const SizedBox(height: 30),
+              const Text(textSearch, style: ksmallTitle),
+              const SizedBox(height: 30),
+              const Padding(
+                padding: kpadding,
+                child: Card(
+                  child: ListTile(
+                    leading: Icon(Icons.call),
+                    title: Text(phone, style: ksmallTitle),
+                  ),
+                ),
+              ),
+              const Padding(
+                padding: kpadding,
+                child: Card(
+                  child: ListTile(
+                    leading: Icon(Icons.email),
+                    title: Text(mail, style: ksmallTitle),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 15),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        children: const [
+                          Text(ed,
+                              textAlign: TextAlign.center, style: ksmallTitle),
+                          SizedBox(height: 10),
+                          Text(study,
+                              textAlign: TextAlign.center, style: ksmallTitle),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: const [
+                          Text(we,
+                              textAlign: TextAlign.center, style: ksmallTitle),
+                          SizedBox(height: 10),
+                          Text(job,
+                              textAlign: TextAlign.center, style: ksmallTitle),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
           ),
-        ])),
+        ),
       ),
     );
   }
