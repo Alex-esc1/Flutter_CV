@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cv/const.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,11 +32,14 @@ class MyCv extends StatelessWidget {
             radius: 90,
             foregroundImage: AssetImage('assets/photo.jpeg'),
           ),
-          Text('Alex Shilenkov'),
-          Text('looking for a job Team Lead/Product Owner'),
+          Text(
+            'Alex Shilenkov',
+            style: kbigTitle,
+          ),
+          Text('looking for a job Team Lead/Product Owner', style: ksmallTitle),
           SizedBox(height: 30),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
+            padding: kpadding,
             child: Card(
               child: ListTile(
                 leading: Icon(Icons.call),
@@ -44,7 +48,7 @@ class MyCv extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
+            padding: kpadding,
             child: Card(
               child: ListTile(
                 leading: Icon(Icons.email),
