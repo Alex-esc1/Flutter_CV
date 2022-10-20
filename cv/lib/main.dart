@@ -25,17 +25,34 @@ class MyCv extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-            child: Column(
-          children: const [
-            SizedBox(height: 30),
-            CircleAvatar(
-              radius: 90,
-              foregroundImage: AssetImage('assets/photo.jpeg'),
+            child: Column(children: const [
+          SizedBox(height: 30),
+          CircleAvatar(
+            radius: 90,
+            foregroundImage: AssetImage('assets/photo.jpeg'),
+          ),
+          Text('Alex Shilenkov'),
+          Text('looking for a job Team Lead/Product Owner'),
+          SizedBox(height: 30),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25),
+            child: Card(
+              child: ListTile(
+                leading: Icon(Icons.call),
+                title: Text("+375 25 745 22 30"),
+              ),
             ),
-            Text('Alex Shilenkov'),
-            Text('looking for a job Team Lead/Product Owner'),
-          ],
-        )),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25),
+            child: Card(
+              child: ListTile(
+                leading: Icon(Icons.email),
+                title: Text("alexesc154@gmail.com"),
+              ),
+            ),
+          ),
+        ])),
       ),
     );
   }
