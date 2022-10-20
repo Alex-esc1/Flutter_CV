@@ -27,6 +27,10 @@ class MyCv extends StatelessWidget {
           child: Column(
         children: const [
           SizedBox(height: 30),
+          CircleAvatar(
+            radius: 90,
+            foregroundImage: AssetImage('assets/photo.jpeg'),
+          ),
           Text('Alex Shilenkov'),
           Text('looking for a job Team Lead/Product Owner'),
         ],
