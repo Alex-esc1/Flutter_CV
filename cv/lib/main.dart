@@ -22,6 +22,15 @@ class MyCv extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+          child: Column(
+        children: const [
+          SizedBox(height: 30),
+          Text('Alex Shilenkov'),
+          Text('looking for a job Team Lead/Product Owner'),
+        ],
+      )),
+    );
   }
 }
