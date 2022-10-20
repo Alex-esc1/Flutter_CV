@@ -10,8 +10,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return MaterialApp(
-      home: 
+      home: const MyCv(),
     );
+  }
+}
+
+class MyCv extends StatelessWidget {
+  const MyCv({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
